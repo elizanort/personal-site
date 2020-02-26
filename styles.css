@@ -11,6 +11,14 @@
     font-family: 'Krona One', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Krona One', sans-serif;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* Navigation Styles Start Here */
 
 header{
@@ -21,9 +29,6 @@ header{
     z-index:999;
 }
 
-.logo{
-    
-}
 
 .nav-toggle{
     display: none;
@@ -66,7 +71,7 @@ header{
 }
 
 nav{
-    position: absolute;
+    /* position: absolute; */
     text-align: left;
     top: 100%;
     left:0;
@@ -85,7 +90,6 @@ nav ul{
 nav li{
     margin-bottom: 1em;
     margin-left: 1em;
-    
 }
 
 nav a{
@@ -93,11 +97,11 @@ nav a{
     text-decoration: none;
     font-size: 1.1 rem;
     text-transform: uppercase;
-
+    font-family: 'Open Sans', sans-serif;
 }
 
 nav a:hover{
-    color: white;
+    color: rosybrown;
 }
 
 .nav-toggle:checked ~ nav {
@@ -105,33 +109,52 @@ nav a:hover{
 
 }
 
+/* Home Page Styles  */
+.intro{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
 /* Web Styles */
 
-@media only screen and (min-width: 700px){
+@media only screen and (min-width: 500px){
+    header{
+        display: flex;
+    }
     .logo{
+        display: flex;
         text-align: left;
         margin-left: 16px;
     }
+
+    .nav-container{
+        display: flex;
+        align-content: center;
+    }
+
     .nav-toggle-label{
         display:none
     }
 
     nav{
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
         position: relative;
-        align-items: center;
-        
     }
 
-    nav ul{
+    .nav-buttons{
         display: flex;
         margin-right: 16px;
     }
 
+    .nav-buttons a{
+        display: flex;
+        justify-content: center;
+    }
+
     .nav-container{
         display: flex;
-        
+        justify-content: flex-end;
     }
 }
