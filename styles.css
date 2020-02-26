@@ -1,0 +1,137 @@
+:root{
+    background-color: white;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+*, body{
+    margin: 0px;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Krona One', sans-serif;
+}
+
+/* Navigation Styles Start Here */
+
+header{
+    background-color: rgb(241, 226, 211);
+    text-align: center;
+    position:fixed;
+    width: 100%;
+    z-index:999;
+}
+
+.logo{
+    
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    display: block;
+    background: black;
+    height: 2px;
+    width: 1em;
+    border-radius: 3px;
+    position: relative;
+
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content:'';
+    position: absolute;
+}
+
+.nav-toggle-label span::before{
+    bottom: 5px;
+}
+
+.nav-toggle-label span::after{
+    top: 5px;
+}
+
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left:0;
+    background-color:  rgb(241, 226, 211);
+    width: 100%;
+    display: none;
+    
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+    
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.1 rem;
+    text-transform: uppercase;
+
+}
+
+nav a:hover{
+    color: white;
+}
+
+.nav-toggle:checked ~ nav {
+    display: block;  
+
+}
+
+/* Web Styles */
+
+@media only screen and (min-width: 700px){
+    .logo{
+        text-align: left;
+        margin-left: 16px;
+    }
+    .nav-toggle-label{
+        display:none
+    }
+
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        align-items: center;
+        
+    }
+
+    nav ul{
+        display: flex;
+        margin-right: 16px;
+    }
+
+    .nav-container{
+        display: flex;
+        
+    }
+}
